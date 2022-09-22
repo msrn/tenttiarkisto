@@ -20,7 +20,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      
+        with:
+          fetch-depth: '0'
       # Tag commit and increment tag automatically
       # https://github.com/anothrNick/github-tag-action
       - name: Bump version and push tag
